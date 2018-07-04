@@ -18,7 +18,7 @@
         <div class="form-group">
           <label for="password">Password</label>
           <input
-          type="text"
+          type="password"
           id="password"
           class="form-control"
           name="password"
@@ -39,6 +39,7 @@
             <option value="pro">Pro</option>
           </select>
         </div>
+        <p *ngIf="!frm.valid && frm.touched">This form is invalid!</p>
         <button
         class="btn btn-primary"
         type="submit" [disabled]="!frm.valid">Submit</button>
